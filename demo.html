@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        article {
+            height: 90vh
+        }
+
+        a.next {
+            font-size: 20px;
+            padding: 25px 0 25px 0;
+            display: block;
+        }
+
+        img.logo {
+            max-height: 150px;
+        }
+
+        article.end {
+            display: flex;
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2>HTML can do that?!</h2>
+
+        <p contenteditable>by: j</p>
+
+        <div>
+            <p>So we want to build a website, lets add a few things:</p>
+            <ul>
+                <li><a href="https://bundlephobia.com/result?p=modal-js@3.0.1" target="_blank">Modal</a></li>
+                <li><a href="https://bundlephobia.com/result?p=@polymer/iron-collapse@3.0.1" target="_blank">Collapsing
+                        sections</a>
+                </li>
+                <li><a href="https://bundlephobia.com/result?p=v-tooltip@2.0.2" target="_blank">Tooltips</a></li>
+                <li><a href="https://bundlephobia.com/result?p=progressbar.js@1.1.0" target="_blank">Progress</a></li>
+                <li><a href="https://bundlephobia.com/result?p=react-date-input@0.0.2" target="_blank">Date Input</a>
+                </li>
+                <li><a href="https://bundlephobia.com/result?p=fabric-ui-react-color-input@1.0.4" target="_blank">Color
+                        Input</a></li>
+                <li><a href="https://bundlephobia.com/result?p=autocomplete.js@0.37.0" target="_blank">Autocomplete</a>
+                </li>
+            </ul>
+
+            <p>We've just added almost 1MB of minified JS, and over 4.5 seconds of download time.</p>
+            <p>Let's wait for that to load...</p>
+            <progress id="wait" value=0 max=450 onclick="const bar = document.getElementById('wait'); setInterval(() => {if (bar.value <= 450) { bar.value += 1 }}, 10);"></progress>
+            <p>Nevermind any frameworks, fonts, styles and any business logic we need!</p>
+            <p>But what about if we didn't need these js modules!</p>
+
+            <a class="next" href="#1">Next</a>
+        </div>
+    </article>
+    <article id="1">
+        <h2>Modals (Dialogs)</h2>
+        <dialog id="dialog">
+            <h3>Terms and Conditions I guess.</h3>
+
+            <p>Or maybe something more annoying like subscribe to our newsletter?</p>
+            <button onclick="document.getElementById('dialog').close()">GO AWAY</button>
+        </dialog>
+        <button onclick="document.getElementById('dialog').showModal()">OPEN</button>
+
+        <a class="next" href="#2">Next</a>
+    </article>
+
+    <article id="2">
+        <h2>Collapsing Sections</h2>
+        <details>
+            <summary>Ready for some magic?</summary>
+            <p>This is pretty awesome right, all collapsing by itself!</p>
+            <p>Yay, html spec!</p>
+        </details>
+        <a class="next" href="#3">Next</a>
+    </article>
+
+    <article id="3">
+        <h2>Progress</h2>
+        <progress id="progress" max=10></progress>
+        <p>Talk faster...</p>
+        <button
+            onclick="const bar = document.getElementById('progress'); setInterval(() => bar.value += 1, 1000);">GO</button>
+
+        <a class="next" href="#4">Next</a>
+    </article>
+
+    <article id="4">
+        <h2>Tooltips</h2>
+
+        <p>Want a tooltip? Just use attribute title <span title="Look what HTML can do!">for example</span></p>
+        <a class="next" href="#5">Next</a>
+    </article>
+
+    <article id="5">
+        <h2>Capture Dates</h2>
+        <input type="date">
+        <a class="next" href="#6">Next</a>
+    </article>
+
+    <article id="6">
+        <h2>Capture Colors</h2>
+        <input type="color">
+        <a class="next" href="#7">Next</a>
+    </article>
+
+    <article id="7">
+        <h2>Autocomplete</h2>
+        <input list="browsers">
+
+        <datalist id="browsers">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <a class="next" href="#8">Next</a>
+    </article>
+
+    <article class="end" id="8">
+        <figure class="contact">
+            <img class="logo" src="https://image.freepik.com/free-icon/github-logo_318-53553.jpg">
+            <figcaption>@jordanfinners</figcaption>
+        </figure>
+        <figure class="contact">
+            <img class="logo"
+                src="https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/1200px-Twitter_Bird.svg.png">
+            <figcaption>@jordanfinners</figcaption>
+        </figure>
+    </article>
+</body>
+
+</html>
