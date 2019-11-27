@@ -3,7 +3,7 @@
 
 A brief talk about the amazing things HTML elements can do! Covering off situations that commonly require lots of JavaScript such as modals and collapsing sections and more! Reduce your bundle size, increase performance and use the platform!
 
-Video avaliable [here](https://www.youtube.com/playlist?list=PLRyeuDS8I2Y2wqg2RWTt_jVSMflg4UVbK).
+Video avaliable [here](https://youtu.be/uNC86MW0Sao?t=1428).
 
 demo.html demonstated a number of HTML elements you can use instead of Javascript, they are broadly supported across browsers (but check with your use case).
 
